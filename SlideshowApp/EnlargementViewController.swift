@@ -19,7 +19,7 @@ class EnlargementViewController: UIViewController {
         guard let photoId = photoId else {
             fatalError()
         }
-        self.showImage(imageView: imageView, url: "https://source.unsplash.com/\(photoId)")
+        self.showImage(imageView: imageView, name: photoId)
     }
     
     func trimmingImage(_ image: UIImage, trimmingArea: CGRect) -> UIImage {
@@ -28,20 +28,15 @@ class EnlargementViewController: UIViewController {
         return trimImage
     }
     
-    private func showImage(imageView: UIImageView, url: String) {
-        let url = URL(string: url)
-        do {
-            let data = try Data(contentsOf: url!)
-            let image = UIImage(data: data)
+    private func showImage(imageView: UIImageView, name: String) {
+        let image = UIImage(named: "\(name).jpeg")
+        imageView.image = image
             
             let clipRect = CGRect(x: image!.size.width * 0.2, y: image!.size.height * 0.4, width: image!.size.width * 0.6, height: image!.size.width * 0.6)
             let _image: UIImage = trimmingImage(image!, trimmingArea: clipRect)
             
             imageView.image = _image
             
-        } catch let err {
-            print("Error: \(err.localizedDescription)")
-        }
     }
     /*
     // MARK: - Navigation
