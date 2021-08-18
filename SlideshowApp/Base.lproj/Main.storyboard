@@ -46,8 +46,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T44-xw-adN">
-                                <rect key="frame" x="174" y="686" width="66" height="30"/>
-                                <state key="normal" title="再生/停止"/>
+                                <rect key="frame" x="191.66666666666666" y="686" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="STARTANDPAUSE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lf8-Hf-lTp"/>
                                 </connections>
